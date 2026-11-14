@@ -1,0 +1,571 @@
+{
+  "schemaVersion": 1,
+  "modules": [
+    {
+      "app": "web",
+      "type": "frontend-framework",
+      "id": "react-vite",
+      "version": "1.0.1",
+      "variant": "ts-react-18",
+      "adaptedFrom": "react ^18.0.0 -> react 19",
+      "injectedFiles": [
+        {
+          "path": "apps/web/index.html",
+          "templateHash": "3dbcf875b7dfb41c393c51e420eeb0daa1801b8518a8aef92a38e2a11a587346",
+          "adaptedHash": "3dbcf875b7dfb41c393c51e420eeb0daa1801b8518a8aef92a38e2a11a587346"
+        },
+        {
+          "path": "apps/web/vite.config.ts",
+          "templateHash": "40c99707c55a6ca34eb13f5f24b0d48abdd158bc84c529b4fc98afa614370545",
+          "adaptedHash": "40c99707c55a6ca34eb13f5f24b0d48abdd158bc84c529b4fc98afa614370545"
+        },
+        {
+          "path": "apps/web/src/main.tsx",
+          "templateHash": "a783c12c84c260c4498387cf4bb7041bf05a74a7e696cc1dc41bad3dba0c9694",
+          "adaptedHash": "a783c12c84c260c4498387cf4bb7041bf05a74a7e696cc1dc41bad3dba0c9694"
+        },
+        {
+          "path": "apps/web/src/app/App.tsx",
+          "templateHash": "5887e8bb545e5f2807b23ff93ff87057420984cb8618b530bbf174ffaaf49e17",
+          "adaptedHash": "5887e8bb545e5f2807b23ff93ff87057420984cb8618b530bbf174ffaaf49e17"
+        },
+        {
+          "path": "apps/web/tests/modules/react-vite/contract/app.test.tsx",
+          "templateHash": "1c56a5b1e6ed945460d22633b1dd879728c32fea397ff17351ea40b6203e0f38",
+          "adaptedHash": "1c56a5b1e6ed945460d22633b1dd879728c32fea397ff17351ea40b6203e0f38"
+        },
+        {
+          "path": "apps/web/tests/modules/react-vite/contract/main.test.tsx",
+          "templateHash": "7c8efbfd4934aade571a9619649feeee1a8f44e0046372cd86109eac36faab64",
+          "adaptedHash": "7c8efbfd4934aade571a9619649feeee1a8f44e0046372cd86109eac36faab64"
+        },
+        {
+          "path": "apps/web/tests/modules/react-vite/contract/viteConfig.test.ts",
+          "templateHash": "c9cf82b21c1b720f41a0942adda9ebd6afc2424ecaaa98cec404d33e14b7c97b",
+          "adaptedHash": "c9cf82b21c1b720f41a0942adda9ebd6afc2424ecaaa98cec404d33e14b7c97b"
+        },
+        {
+          "path": "apps/web/tests/modules/react-vite/fit/glue.test.tsx",
+          "templateHash": "e16b668fb953bab236fb7ad8b60e2f768b3597137be37edf760169d6e886fbf1",
+          "adaptedHash": "e16b668fb953bab236fb7ad8b60e2f768b3597137be37edf760169d6e886fbf1"
+        }
+      ],
+      "answers": {
+        "PORT": "5173"
+      },
+      "adaptedAt": "2026-11-14T11:46:59.844Z"
+    },
+    {
+      "app": "web",
+      "type": "styling",
+      "id": "chakra-styling",
+      "version": "1.0.0",
+      "variant": "ts-react-18",
+      "adaptedFrom": "react ^18.0.0 -> react 19",
+      "injectedFiles": [
+        {
+          "path": "apps/web/src/styling/tokens.ts",
+          "templateHash": "90f21aa4dd78342ccd209749cae135a4f624e373e2d5a81f33102614be9f57ec",
+          "adaptedHash": "90f21aa4dd78342ccd209749cae135a4f624e373e2d5a81f33102614be9f57ec"
+        },
+        {
+          "path": "apps/web/src/styling/ChakraAppProvider.tsx",
+          "templateHash": "4ac83357a42dfaa78e61aa0e1547f7b5220f33bd117076da181463a0950ea82a",
+          "adaptedHash": "4ac83357a42dfaa78e61aa0e1547f7b5220f33bd117076da181463a0950ea82a"
+        },
+        {
+          "path": "apps/web/tests/modules/chakra-styling/contract/theme.test.tsx",
+          "templateHash": "60ce23fa2b888676b7820c6e7d5aac23495ca607a55f64849a28903f2dd36939",
+          "adaptedHash": "60ce23fa2b888676b7820c6e7d5aac23495ca607a55f64849a28903f2dd36939"
+        },
+        {
+          "path": "apps/web/tests/modules/chakra-styling/fit/glue.test.tsx",
+          "templateHash": "36b29159f720f916adde33f88972d2473c33fffbd1225111fb01981c77b2183a",
+          "adaptedHash": "36b29159f720f916adde33f88972d2473c33fffbd1225111fb01981c77b2183a"
+        }
+      ],
+      "answers": {},
+      "adaptedAt": "2026-11-14T11:47:34.204Z"
+    },
+    {
+      "app": "web",
+      "type": "state-management",
+      "id": "zustand-state",
+      "version": "1.0.0",
+      "variant": "ts-react-18",
+      "adaptedFrom": "react ^18.0.0 -> react 19",
+      "injectedFiles": [
+        {
+          "path": "apps/web/src/state/createStore.ts",
+          "templateHash": "d94c1d3b802ee2249e802f59f2e565b2722b73ea057d92460d3cc41587829a82",
+          "adaptedHash": "d94c1d3b802ee2249e802f59f2e565b2722b73ea057d92460d3cc41587829a82"
+        },
+        {
+          "path": "apps/web/src/state/useAsync.ts",
+          "templateHash": "ea6c6cf230989fb0099f9f27269230380634ebca0afd5028999cdcfdef8550c1",
+          "adaptedHash": "ea6c6cf230989fb0099f9f27269230380634ebca0afd5028999cdcfdef8550c1"
+        },
+        {
+          "path": "apps/web/tests/modules/zustand-state/contract/createStore.test.ts",
+          "templateHash": "e3f726eb5265d61fe59ce7775a4d1d26df75168dee8ea4942eb8f7904e315b4e",
+          "adaptedHash": "e3f726eb5265d61fe59ce7775a4d1d26df75168dee8ea4942eb8f7904e315b4e"
+        },
+        {
+          "path": "apps/web/tests/modules/zustand-state/contract/useAsync.test.tsx",
+          "templateHash": "30fb610899ae244e11a23366b3c92d8bdd9be33482a3080947bbdc44b391c274",
+          "adaptedHash": "30fb610899ae244e11a23366b3c92d8bdd9be33482a3080947bbdc44b391c274"
+        },
+        {
+          "path": "apps/web/tests/modules/zustand-state/fit/default.test.ts",
+          "templateHash": "6c9d250af5dee044e9adf30b3c9e86857c05dc208ba5b7e87306cd4097ab02c3",
+          "adaptedHash": "6c9d250af5dee044e9adf30b3c9e86857c05dc208ba5b7e87306cd4097ab02c3"
+        }
+      ],
+      "answers": {},
+      "adaptedAt": "2026-11-14T11:47:38.771Z"
+    },
+    {
+      "app": "web",
+      "type": "testing",
+      "id": "jest-react",
+      "version": "1.0.0",
+      "variant": "ts-react-18",
+      "adaptedFrom": "react ^18.0.0 -> react 19",
+      "injectedFiles": [
+        {
+          "path": "apps/web/jest.config.js",
+          "templateHash": "d4c06ff6a8f6c05f59cebb940ab515214299fd4dea6a64f21136e7e9e14f4a16",
+          "adaptedHash": "3f78d0969067a2f9d424ed51cdaa7de6918641d96da562b032a3164070c79903"
+        },
+        {
+          "path": "apps/web/src/testing/setup.ts",
+          "templateHash": "d92be0174433d00c935e77549c1e314a3489fbb779ad915a228bea826b03a3e0",
+          "adaptedHash": "9e2a3f1dbb41eedf8be35d627069f6f4326244fa5fb0d26473c042bf0be426d4"
+        },
+        {
+          "path": "apps/web/src/testing/render.tsx",
+          "templateHash": "58714831493d633922c84a05b9f7641e61994f50fb7f3f8d13742ae45df4b851",
+          "adaptedHash": "58714831493d633922c84a05b9f7641e61994f50fb7f3f8d13742ae45df4b851"
+        },
+        {
+          "path": "apps/web/tests/modules/jest-react/contract/config.test.ts",
+          "templateHash": "8bdb706d8dadeb3d5b057e24468e4426d849c40e4e0e92150f5d8d3234366b88",
+          "adaptedHash": "8bdb706d8dadeb3d5b057e24468e4426d849c40e4e0e92150f5d8d3234366b88"
+        },
+        {
+          "path": "apps/web/tests/modules/jest-react/contract/render.test.tsx",
+          "templateHash": "5320c01d5fe05b34003d07731a5860fc9e449babc71f36d1434d8ae46295a7b9",
+          "adaptedHash": "5320c01d5fe05b34003d07731a5860fc9e449babc71f36d1434d8ae46295a7b9"
+        },
+        {
+          "path": "apps/web/tests/modules/jest-react/contract/setup.test.ts",
+          "templateHash": "584ab97ff425e1f03621f985b3b9ab3c5ed7b8948587eac63561b5c9af6574a3",
+          "adaptedHash": "584ab97ff425e1f03621f985b3b9ab3c5ed7b8948587eac63561b5c9af6574a3"
+        },
+        {
+          "path": "apps/web/tests/modules/jest-react/fit/layout.test.ts",
+          "templateHash": "12c84cd92dc93abc5cb44c3ce55b2b1632eeeef2884f9ac0abe1a0337703e48c",
+          "adaptedHash": "12c84cd92dc93abc5cb44c3ce55b2b1632eeeef2884f9ac0abe1a0337703e48c"
+        }
+      ],
+      "answers": {},
+      "adaptedAt": "2026-11-14T11:48:00.502Z"
+    },
+    {
+      "app": "web",
+      "type": "api-client",
+      "id": "openapi-client",
+      "version": "1.0.0",
+      "variant": "ts-react-18",
+      "adaptedFrom": "react ^18.0.0 -> react 19",
+      "injectedFiles": [
+        {
+          "path": "apps/web/src/api/schema.d.ts",
+          "templateHash": "1dc698f399a5c1cfd36b59eff17273e0dcab4e1af3bbd844b95d6191acce1999",
+          "adaptedHash": "1dc698f399a5c1cfd36b59eff17273e0dcab4e1af3bbd844b95d6191acce1999"
+        },
+        {
+          "path": "apps/web/src/api/client.ts",
+          "templateHash": "e5d60905761e9191bb52a8e386c81b0049575e7fbbb01db17ffa17b80a8093e8",
+          "adaptedHash": "e5d60905761e9191bb52a8e386c81b0049575e7fbbb01db17ffa17b80a8093e8"
+        },
+        {
+          "path": "apps/web/scripts/generate-client.cjs",
+          "templateHash": "2f15dfd88f59d2a88e71f680d5fd45033fcee0594e60e52e05f842fcfd55800d",
+          "adaptedHash": "fd768438884db81448e00294a37fc2e286d8d14b069cc78a9c4ba1a58cd6781b"
+        },
+        {
+          "path": "apps/web/tests/modules/openapi-client/contract/client.test.ts",
+          "templateHash": "3996c9fcc966028943edc424b14276a66ef6135afde2344b140ea250187eea03",
+          "adaptedHash": "3996c9fcc966028943edc424b14276a66ef6135afde2344b140ea250187eea03"
+        },
+        {
+          "path": "apps/web/tests/modules/openapi-client/contract/generate.test.ts",
+          "templateHash": "146639d50638e0dc1ec027fcf3fe4b3d21bed2a434463d720cccc9ff8d4bcf42",
+          "adaptedHash": "be8acca24b7918d0f6305260b1b3367e7505dd751094548d053ecbacc26706b7"
+        },
+        {
+          "path": "apps/web/tests/modules/openapi-client/fit/layout.test.ts",
+          "templateHash": "ab181f0c3b54f2dc6cf913907bfd9ce65a696d0eb74162865e5fc2201910f847",
+          "adaptedHash": "ab181f0c3b54f2dc6cf913907bfd9ce65a696d0eb74162865e5fc2201910f847"
+        }
+      ],
+      "answers": {},
+      "adaptedAt": "2026-11-14T11:48:05.825Z"
+    },
+    {
+      "app": "api",
+      "type": "backend-framework",
+      "id": "fastapi",
+      "version": "1.0.0",
+      "variant": "py-3.12",
+      "adaptedFrom": null,
+      "injectedFiles": [
+        {
+          "path": "apps/api/app/http/__init__.py",
+          "templateHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "adaptedHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "apps/api/app/http/settings.py",
+          "templateHash": "e54ad993f0f9ffd40f7101bd8db1c18930ddb6faeca438f04bea02faeb8a2f9e",
+          "adaptedHash": "e54ad993f0f9ffd40f7101bd8db1c18930ddb6faeca438f04bea02faeb8a2f9e"
+        },
+        {
+          "path": "apps/api/app/http/app.py",
+          "templateHash": "80eaa6c3a2ad0ab638e94545b865c3e99794eac2ea4bc719e5132315f99b6fd1",
+          "adaptedHash": "80eaa6c3a2ad0ab638e94545b865c3e99794eac2ea4bc719e5132315f99b6fd1"
+        },
+        {
+          "path": "apps/api/app/http/server.py",
+          "templateHash": "eb3b4a19e81a91445a6b07aafdd4c10d8ba5f24fce26e2b4635e8bcfe96ea879",
+          "adaptedHash": "eb3b4a19e81a91445a6b07aafdd4c10d8ba5f24fce26e2b4635e8bcfe96ea879"
+        },
+        {
+          "path": "apps/api/tests/modules/fastapi/contract/test_app.py",
+          "templateHash": "ba6ca06740bec99b04676c24d2d1ffa22873b96af6846f30ab464a622d6d0300",
+          "adaptedHash": "ba6ca06740bec99b04676c24d2d1ffa22873b96af6846f30ab464a622d6d0300"
+        },
+        {
+          "path": "apps/api/tests/modules/fastapi/contract/test_settings.py",
+          "templateHash": "8d47bfb210d9e7e2a8dd0cf21b970287e8c54fa08563a1e6aed25039cb707385",
+          "adaptedHash": "8d47bfb210d9e7e2a8dd0cf21b970287e8c54fa08563a1e6aed25039cb707385"
+        },
+        {
+          "path": "apps/api/tests/modules/fastapi/fit/test_glue.py",
+          "templateHash": "cf4c8f4bce71b89ab95e613dfb3ac51d7756ff37e4179db60a476655d9f6794f",
+          "adaptedHash": "cf4c8f4bce71b89ab95e613dfb3ac51d7756ff37e4179db60a476655d9f6794f"
+        }
+      ],
+      "answers": {
+        "PORT": "8000"
+      },
+      "adaptedAt": "2026-11-14T11:48:30.361Z"
+    },
+    {
+      "app": "api",
+      "type": "testing",
+      "id": "pytest-testing",
+      "version": "1.0.0",
+      "variant": "py-3.12",
+      "adaptedFrom": null,
+      "injectedFiles": [
+        {
+          "path": "apps/api/pytest.ini",
+          "templateHash": "2db530a24992b064dfd53cc5facb6330470a8d7baaf064e2d7200fa4eb289670",
+          "adaptedHash": "2db530a24992b064dfd53cc5facb6330470a8d7baaf064e2d7200fa4eb289670"
+        },
+        {
+          "path": "apps/api/.coveragerc",
+          "templateHash": "0df5147f6a757563c443cb2a9bc0f9124b4999594e1fd4c3e69cba25ccaa7b0d",
+          "adaptedHash": "0df5147f6a757563c443cb2a9bc0f9124b4999594e1fd4c3e69cba25ccaa7b0d"
+        },
+        {
+          "path": "apps/api/tests/helpers.py",
+          "templateHash": "a540532c83522c955ecc2ddc6cfd1748ecbb3db910e8aa8dbc570ff141438fcd",
+          "adaptedHash": "a540532c83522c955ecc2ddc6cfd1748ecbb3db910e8aa8dbc570ff141438fcd"
+        },
+        {
+          "path": "apps/api/tests/modules/pytest-testing/contract/test_config.py",
+          "templateHash": "28760c360564451e5f692acd56bf5116d5150faa1d03c606067a82814880fed7",
+          "adaptedHash": "28760c360564451e5f692acd56bf5116d5150faa1d03c606067a82814880fed7"
+        },
+        {
+          "path": "apps/api/tests/modules/pytest-testing/contract/test_helpers.py",
+          "templateHash": "982a6b0b9f2298185942ec31f9cd25c3a5bbddde59c80f8e0911b310008c43ea",
+          "adaptedHash": "982a6b0b9f2298185942ec31f9cd25c3a5bbddde59c80f8e0911b310008c43ea"
+        },
+        {
+          "path": "apps/api/tests/modules/pytest-testing/fit/test_layout.py",
+          "templateHash": "f81cebe03cdc2d7879fd96982e9873c1c07dcce1ae13ce5795e623092fe5198a",
+          "adaptedHash": "f81cebe03cdc2d7879fd96982e9873c1c07dcce1ae13ce5795e623092fe5198a"
+        }
+      ],
+      "answers": {},
+      "adaptedAt": "2026-11-14T11:48:35.352Z"
+    },
+    {
+      "app": "api",
+      "type": "linting",
+      "id": "python-quality",
+      "version": "1.0.0",
+      "variant": "py-3.12",
+      "adaptedFrom": null,
+      "injectedFiles": [
+        {
+          "path": "apps/api/ruff.toml",
+          "templateHash": "2ee54bac9de2435fc9a0768d6de6d84a45d938ae87973224404802ad50047845",
+          "adaptedHash": "2ee54bac9de2435fc9a0768d6de6d84a45d938ae87973224404802ad50047845"
+        },
+        {
+          "path": "apps/api/mypy.ini",
+          "templateHash": "e05e202f8e5f79355c59fa1fcfec7420e495b94b104510be643c7df0993b5f50",
+          "adaptedHash": "e05e202f8e5f79355c59fa1fcfec7420e495b94b104510be643c7df0993b5f50"
+        },
+        {
+          "path": "apps/api/tests/modules/python-quality/contract/test_config.py",
+          "templateHash": "82e689b2b7e3b8440b4630ecb1484710e473f0f717e62746176893cdbaa4bc76",
+          "adaptedHash": "82e689b2b7e3b8440b4630ecb1484710e473f0f717e62746176893cdbaa4bc76"
+        },
+        {
+          "path": "apps/api/tests/modules/python-quality/fit/test_layout.py",
+          "templateHash": "30e25cd8619fbe23a3f11035f282eb2f11db63cc797d4eebce070deb611f5e8e",
+          "adaptedHash": "30e25cd8619fbe23a3f11035f282eb2f11db63cc797d4eebce070deb611f5e8e"
+        }
+      ],
+      "answers": {},
+      "adaptedAt": "2026-11-14T11:48:39.573Z"
+    },
+    {
+      "app": "api",
+      "type": "build-tools",
+      "id": "python-build",
+      "version": "1.0.0",
+      "variant": "py-3.12",
+      "adaptedFrom": null,
+      "injectedFiles": [
+        {
+          "path": "apps/api/scripts/tasks.py",
+          "templateHash": "49471444645e8fc7e930fca4dd104c65b53da9587383747d92e2b6b26af3d0eb",
+          "adaptedHash": "49471444645e8fc7e930fca4dd104c65b53da9587383747d92e2b6b26af3d0eb"
+        },
+        {
+          "path": "apps/api/scripts/export_openapi.py",
+          "templateHash": "6d0632fc44fc39e6c89aaa5969c7187840642f33a4cd451141da6179f5e0aa72",
+          "adaptedHash": "6d0632fc44fc39e6c89aaa5969c7187840642f33a4cd451141da6179f5e0aa72"
+        },
+        {
+          "path": "apps/api/tests/modules/python-build/contract/test_openapi.py",
+          "templateHash": "f2c2b2bff36b8d0a0beeb84edd8017c29f00f27afa50a1ada5eb4541176d8450",
+          "adaptedHash": "f2c2b2bff36b8d0a0beeb84edd8017c29f00f27afa50a1ada5eb4541176d8450"
+        },
+        {
+          "path": "apps/api/tests/modules/python-build/contract/test_tasks.py",
+          "templateHash": "a4b6486b34f0a31aa34aa595e2a461e73f46c281276925fe8ed9ec3471874786",
+          "adaptedHash": "a4b6486b34f0a31aa34aa595e2a461e73f46c281276925fe8ed9ec3471874786"
+        },
+        {
+          "path": "apps/api/tests/modules/python-build/fit/test_layout.py",
+          "templateHash": "b7f628b74a81a9be6e7c5ca81a5c8e4ff5cc573e6985a58773844a33da69a676",
+          "adaptedHash": "b7f628b74a81a9be6e7c5ca81a5c8e4ff5cc573e6985a58773844a33da69a676"
+        }
+      ],
+      "answers": {},
+      "adaptedAt": "2026-11-14T11:48:43.536Z"
+    },
+    {
+      "app": "api",
+      "type": "database",
+      "id": "sqlalchemy-db",
+      "version": "1.0.0",
+      "variant": "py-3.12",
+      "adaptedFrom": null,
+      "injectedFiles": [
+        {
+          "path": "apps/api/app/db/__init__.py",
+          "templateHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "adaptedHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "apps/api/app/db/engine.py",
+          "templateHash": "e235d9d63cdd3165b388b71971b44dde2fa3f0a2297121a05aa818923b0b55fe",
+          "adaptedHash": "e235d9d63cdd3165b388b71971b44dde2fa3f0a2297121a05aa818923b0b55fe"
+        },
+        {
+          "path": "apps/api/app/db/base.py",
+          "templateHash": "049c566a9f133796d33513354b96a0cc86014abae0965d6c87d4060a2e3d4571",
+          "adaptedHash": "049c566a9f133796d33513354b96a0cc86014abae0965d6c87d4060a2e3d4571"
+        },
+        {
+          "path": "apps/api/app/db/models.py",
+          "templateHash": "d1f52b3de8b5ef944b1ac7f9aef8d7cb35e206edf0876ebbf8e2a7d9c35f4101",
+          "adaptedHash": "d1f52b3de8b5ef944b1ac7f9aef8d7cb35e206edf0876ebbf8e2a7d9c35f4101"
+        },
+        {
+          "path": "apps/api/app/db/session.py",
+          "templateHash": "c7c718abbbf8453885c71cefc39a7b98ce8bbccb434362c74970eb7730ab4bd3",
+          "adaptedHash": "c7c718abbbf8453885c71cefc39a7b98ce8bbccb434362c74970eb7730ab4bd3"
+        },
+        {
+          "path": "apps/api/app/db/provider.py",
+          "templateHash": "67ad240e8dd89cea654b69846462dbeac4fdf28570c4b18a73f66a59b6b11570",
+          "adaptedHash": "67ad240e8dd89cea654b69846462dbeac4fdf28570c4b18a73f66a59b6b11570"
+        },
+        {
+          "path": "apps/api/tests/modules/sqlalchemy-db/contract/test_engine.py",
+          "templateHash": "35bb9f297489d735f1ac2fc5f35e5320898677e64b0a6033df73878ca0646bbe",
+          "adaptedHash": "35bb9f297489d735f1ac2fc5f35e5320898677e64b0a6033df73878ca0646bbe"
+        },
+        {
+          "path": "apps/api/tests/modules/sqlalchemy-db/contract/test_provider.py",
+          "templateHash": "69237f83923aa333a25e61b9c3ac743f2824a270ef5b1299f5cf4ef744e4903f",
+          "adaptedHash": "69237f83923aa333a25e61b9c3ac743f2824a270ef5b1299f5cf4ef744e4903f"
+        },
+        {
+          "path": "apps/api/tests/modules/sqlalchemy-db/contract/test_session.py",
+          "templateHash": "8286717b70c3265c430632875dd285fe8c81b3e5f95ba0496c0b227779fa609a",
+          "adaptedHash": "8286717b70c3265c430632875dd285fe8c81b3e5f95ba0496c0b227779fa609a"
+        },
+        {
+          "path": "apps/api/tests/modules/sqlalchemy-db/fit/test_wiring.py",
+          "templateHash": "dbc610c0389b6a78e718c3bce79daa0b6f097eb5540e46220d26265ce18ebe00",
+          "adaptedHash": "dbc610c0389b6a78e718c3bce79daa0b6f097eb5540e46220d26265ce18ebe00"
+        }
+      ],
+      "answers": {
+        "DATABASE_URL": "libsql://tursodemo-busettypavan.aws-ap-south-1.turso.io"
+      },
+      "adaptedAt": "2026-11-14T11:48:58.523Z"
+    },
+    {
+      "app": "api",
+      "type": "auth",
+      "id": "jwt-auth",
+      "version": "1.1.0",
+      "variant": "py-3.12",
+      "adaptedFrom": null,
+      "injectedFiles": [
+        {
+          "path": "apps/api/app/auth/__init__.py",
+          "templateHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "adaptedHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "apps/api/app/auth/jwt.py",
+          "templateHash": "523d167fc30170fabb7587cbef786f4d439509a590c874f40ebb920bd947f7c2",
+          "adaptedHash": "523d167fc30170fabb7587cbef786f4d439509a590c874f40ebb920bd947f7c2"
+        },
+        {
+          "path": "apps/api/app/auth/middleware.py",
+          "templateHash": "abb6aed58204d7890fc6103865395b098c9c2d25e7014e271123be9c2c6b6177",
+          "adaptedHash": "abb6aed58204d7890fc6103865395b098c9c2d25e7014e271123be9c2c6b6177"
+        },
+        {
+          "path": "apps/api/tests/modules/jwt-auth/contract/test_jwt.py",
+          "templateHash": "299e93daa1abf2e7a994eb0435b837d7d5cc057291f64e1af2cd38fe9603f453",
+          "adaptedHash": "299e93daa1abf2e7a994eb0435b837d7d5cc057291f64e1af2cd38fe9603f453"
+        },
+        {
+          "path": "apps/api/tests/modules/jwt-auth/contract/test_middleware.py",
+          "templateHash": "295545302eddda6f2cc556945360f99dec814c6c3a71756399736e850db0326f",
+          "adaptedHash": "295545302eddda6f2cc556945360f99dec814c6c3a71756399736e850db0326f"
+        },
+        {
+          "path": "apps/api/tests/modules/jwt-auth/fit/test_wiring.py",
+          "templateHash": "b2a0a4f1f820353ea6a6c90e755594e73cb7449757799258e0c504fb9ce033b9",
+          "adaptedHash": "b2a0a4f1f820353ea6a6c90e755594e73cb7449757799258e0c504fb9ce033b9"
+        }
+      ],
+      "answers": {
+        "JWT_SECRET": "<secret: set in env>"
+      },
+      "adaptedAt": "2026-11-14T11:49:25.583Z"
+    },
+    {
+      "app": "api",
+      "type": "audit-trail",
+      "id": "audit-trail",
+      "version": "1.1.0",
+      "variant": "py-3.12",
+      "adaptedFrom": null,
+      "injectedFiles": [
+        {
+          "path": "apps/api/app/audit/__init__.py",
+          "templateHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "adaptedHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "apps/api/app/audit/trail.py",
+          "templateHash": "9f0b9cdd800efa43de205afb1bbfa4a363ea6ed1f8f5c5868a2795b2c6e3ac35",
+          "adaptedHash": "9f0b9cdd800efa43de205afb1bbfa4a363ea6ed1f8f5c5868a2795b2c6e3ac35"
+        },
+        {
+          "path": "apps/api/app/audit/middleware.py",
+          "templateHash": "b7c1c2f065e7e764d4414d3175da89ba5a31541e3cb271f4765d184d444cf0da",
+          "adaptedHash": "b7c1c2f065e7e764d4414d3175da89ba5a31541e3cb271f4765d184d444cf0da"
+        },
+        {
+          "path": "apps/api/tests/modules/audit-trail/contract/test_middleware.py",
+          "templateHash": "7ede2def10ffbaf65c9107ced6105075b2a7da6777dc216498ef033e8b5bf749",
+          "adaptedHash": "7ede2def10ffbaf65c9107ced6105075b2a7da6777dc216498ef033e8b5bf749"
+        },
+        {
+          "path": "apps/api/tests/modules/audit-trail/contract/test_trail.py",
+          "templateHash": "80b17454ad244ceedeae2caa4206eaa6f03911d4cc9afeca07af759ec2eb2463",
+          "adaptedHash": "80b17454ad244ceedeae2caa4206eaa6f03911d4cc9afeca07af759ec2eb2463"
+        },
+        {
+          "path": "apps/api/tests/modules/audit-trail/fit/test_wiring.py",
+          "templateHash": "0c3d86c93f32c696f46ca0a9571e783253d8c3c027175ef7ff36fc0687975a11",
+          "adaptedHash": "0c3d86c93f32c696f46ca0a9571e783253d8c3c027175ef7ff36fc0687975a11"
+        }
+      ],
+      "answers": {},
+      "adaptedAt": "2026-11-14T11:49:30.889Z"
+    },
+    {
+      "app": "api",
+      "type": "server-cache",
+      "id": "memory-cache",
+      "version": "1.1.0",
+      "variant": "py-3.12",
+      "adaptedFrom": null,
+      "injectedFiles": [
+        {
+          "path": "apps/api/app/cache/__init__.py",
+          "templateHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "adaptedHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "apps/api/app/cache/memory.py",
+          "templateHash": "b30f6386ea3afeeb82d5eea19841673e629267d87a832f58e3a69440e30e02aa",
+          "adaptedHash": "b30f6386ea3afeeb82d5eea19841673e629267d87a832f58e3a69440e30e02aa"
+        },
+        {
+          "path": "apps/api/app/cache/middleware.py",
+          "templateHash": "200e3b917cbf48bdbaa3bf74a8775a2b1085f335abb69ca06f593522aeb9627b",
+          "adaptedHash": "200e3b917cbf48bdbaa3bf74a8775a2b1085f335abb69ca06f593522aeb9627b"
+        },
+        {
+          "path": "apps/api/tests/modules/memory-cache/contract/test_memory.py",
+          "templateHash": "b01771bc33af2e4b778a33ee997bd356653ca809d6b9bd1ca2549870d8462ab4",
+          "adaptedHash": "b01771bc33af2e4b778a33ee997bd356653ca809d6b9bd1ca2549870d8462ab4"
+        },
+        {
+          "path": "apps/api/tests/modules/memory-cache/contract/test_middleware.py",
+          "templateHash": "e98d0fd24b4a875f8b014c3ce27068a33b939ad4dcaef4237e9f80080aadc073",
+          "adaptedHash": "e98d0fd24b4a875f8b014c3ce27068a33b939ad4dcaef4237e9f80080aadc073"
+        },
+        {
+          "path": "apps/api/tests/modules/memory-cache/fit/test_ttl.py",
+          "templateHash": "4e14587a44f3b8d827b61bdcd8938ffca90e0d559695bf5695ba8c9e5409f2aa",
+          "adaptedHash": "4e14587a44f3b8d827b61bdcd8938ffca90e0d559695bf5695ba8c9e5409f2aa"
+        }
+      ],
+      "answers": {
+        "CACHE_TTL_SECONDS": "30"
+      },
+      "adaptedAt": "2026-11-14T11:49:35.757Z"
+    }
+  ]
+}

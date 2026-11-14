@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "project": "KNMDemo",
+  "preset": null,
+  "apps": [
+    {
+      "name": "web",
+      "type": "web",
+      "language": "typescript",
+      "framework": "react",
+      "frameworkVersion": "19",
+      "runtime": "node 20",
+      "modules": [
+        {
+          "type": "frontend-framework",
+          "id": "react-vite",
+          "version": "1.0.1",
+          "variant": "ts-react-18"
+        },
+        {
+          "type": "styling",
+          "id": "chakra-styling",
+          "version": "1.0.0",
+          "variant": "ts-react-18"
+        },
+        {
+          "type": "state-management",
+          "id": "zustand-state",
+          "version": "1.0.0",
+          "variant": "ts-react-18"
+        },
+        {
+          "type": "testing",
+          "id": "jest-react",
+          "version": "1.0.0",
+          "variant": "ts-react-18"
+        },
+        {
+          "type": "api-client",
+          "id": "openapi-client",
+          "version": "1.0.0",
+          "variant": "ts-react-18"
+        }
+      ],
+      "glue": [
+        {
+          "id": "providers",
+          "file": "src/app/providers.tsx"
+        },
+        {
+          "id": "router",
+          "file": "src/app/router.tsx"
+        },
+        {
+          "id": "theme",
+          "file": "src/app/theme.ts"
+        },
+        {
+          "id": "config",
+          "file": "src/app/config.ts"
+        }
+      ],
+      "capabilities": [
+        "http-client",
+        "router",
+        "state-management",
+        "styling",
+        "testing",
+        "ui-framework"
+      ],
+      "designTokens": "src/app/theme.ts"
+    },
+    {
+      "name": "api",
+      "type": "api",
+      "language": "python",
+      "framework": "fastapi",
+      "frameworkVersion": "0",
+      "runtime": "python 3.12",
+      "modules": [
+        {
+          "type": "backend-framework",
+          "id": "fastapi",
+          "version": "1.0.0",
+          "variant": "py-3.12"
+        },
+        {
+          "type": "testing",
+          "id": "pytest-testing",
+          "version": "1.0.0",
+          "variant": "py-3.12"
+        },
+        {
+          "type": "linting",
+          "id": "python-quality",
+          "version": "1.0.0",
+          "variant": "py-3.12"
+        },
+        {
+          "type": "build-tools",
+          "id": "python-build",
+          "version": "1.0.0",
+          "variant": "py-3.12"
+        },
+        {
+          "type": "database",
+          "id": "sqlalchemy-db",
+          "version": "1.0.0",
+          "variant": "py-3.12"
+        },
+        {
+          "type": "auth",
+          "id": "jwt-auth",
+          "version": "1.1.0",
+          "variant": "py-3.12"
+        },
+        {
+          "type": "audit-trail",
+          "id": "audit-trail",
+          "version": "1.1.0",
+          "variant": "py-3.12"
+        },
+        {
+          "type": "server-cache",
+          "id": "memory-cache",
+          "version": "1.1.0",
+          "variant": "py-3.12"
+        }
+      ],
+      "glue": [
+        {
+          "id": "routes",
+          "file": "app/glue/routes.py"
+        },
+        {
+          "id": "middleware",
+          "file": "app/glue/middleware.py"
+        },
+        {
+          "id": "providers",
+          "file": "app/glue/providers.py"
+        },
+        {
+          "id": "config",
+          "file": "app/glue/config.py"
+        }
+      ],
+      "capabilities": [
+        "audit",
+        "auth",
+        "build",
+        "db",
+        "http-server",
+        "linting",
+        "orm",
+        "server-cache",
+        "testing"
+      ]
+    }
+  ]
+}
