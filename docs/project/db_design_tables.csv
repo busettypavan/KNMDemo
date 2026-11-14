@@ -1,0 +1,6 @@
+table,pk,important_fields,description,feedback,status
+users,id,"email, full_name","User accounts for persistent authentication and position tracking",,New
+stocks,id,"symbol, name, sector","Reference table: Nifty 100 curated subset of NSE listings",,New
+price_history,id,"stock_id, date, close, volume","Daily OHLCV data from Yahoo Finance, refreshed once per day",,New
+positions,id,"user_id, stock_id, quantity, buy_price, buy_date","User holdings: each entry is a separate lot, no auto-averaging",,New
+strategies,id,"name, description","Reference: Trading strategies available. MVP includes Moving Average Crossover only",,New
