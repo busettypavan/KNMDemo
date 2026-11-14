@@ -1,29 +1,119 @@
-# User Registration & Sign In
+Login screen : Create User Tab
+------------------------------------------------
 
-## Purpose
-Enable investors to create accounts and maintain persistent access to their positions and portfolio across multiple visits.
++------------------------------------------+
+|                                          |
+|     [ ↗ ]  ● Stock ANALYTICS   	   |
+|                                          |
+|             StockAnalyzer                |
+|  Create your institutional-grade         |
+|          investor account                |
+|                                          |
+|  +------------------------------------+  |
+|  |   Sign In  | [ Create Account ]    |  |
+|  +------------------------------------+  |
+|                                          |
+|  Full Name *                             |
+|  +------------------------------------+  |
+|  | ♙  e.g. John Doe                   | |
+|  +------------------------------------+  |
+|                                          |
+|  Work Email Address *                    |
+|  +------------------------------------+  |
+|  | ✉  john.doe@company.com            | |
+|  +------------------------------------+  |
+|                                          |
+|  Password *                              |
+|  +------------------------------------+  |
+|  | 🔒 Create a strong password     ◉  | |
+|  +------------------------------------+  |
+|                                          |
+|  Confirm Password *                      |
+|  +------------------------------------+  |
+|  | 🔒 Re-enter password to confirm ◉  | |
+|  +------------------------------------+  |
+|                                          |
+|  [✓] I agree to the Terms of Service     |
+|      and Privacy Policy                  |
+|                                          |
+|  +------------------------------------+  |
+|  |       ♙ Create Free Account        | |
+|  +------------------------------------+  |
+|                                          |
++------------------------------------------+
 
-## Behaviour
-- New users can register with email, full name, password, and Terms of Service acceptance
-- Existing users can sign in with email and password
-- User sessions persist across visits
-- Quick demo access available for testing (pre-populated demo accounts)
+Login screen : User signin Tab
+---------------------------------------------
 
-## Acceptance Criteria
-- User can complete registration form with required fields
-- Registered user receives account confirmation
-- User can sign in with registered credentials
-- User session remains active across browser refreshes
-- Demo accounts work for quick access without signup
++------------------------------------------+
+|                                          |
+|      [ ↗ ]  ● Stock ANALYTICS|	   |
+|                                          |
+|             StockAnalyzer                |
+|   Sign in to access your quantitative    |
+|             trading terminal             |
+|                                          |
+|  +------------------------------------+  |
+|  |   [ Sign In ]  |  Create Account   |  |
+|  +------------------------------------+  |
+|                                          |
+|  +------------------------------------+  |
+|  | ✧ QUICK DEMO ACCESS                |  |
+|  |                                    |  |
+|  | [👤 Alex Morgan ] [👤 Sarah Chen] |  |
+|  | [   PRO TRADER  ] [  ENTERPRISE   ]|  |
+|  +------------------------------------+  |
+|                                          |
+|  Email Address *                         |
+|  +------------------------------------+  |
+|  | ✉  name@company.com               |  |
+|  +------------------------------------+  |
+|                                          |
+|  Password *                              |
+|  +------------------------------------+  |
+|  | 🔒 Enter your secret password   ◉  |  |
+|  +------------------------------------+  |
+|                                          |
+|  [✓] Remember me for 30 days             |
+|                       Forgot password?   |
+|                                          |
+|  +------------------------------------+  |
+|  |       → Sign In to Terminal        |  |
+|  +------------------------------------+  |
+|                                          |
++------------------------------------------+
 
-## Order: 1 of 8
-**Depends on:** none
 
-## Source Documents
-- Detailed Functional Requirements §2 (Users & Auth)
-- ASCII Mock images (Login screen)
+Terminal Page:
+----------------------------------------------
 
-## Open Questions
-- Password reset/recovery flow: not yet specified
-- Email verification requirement: confirmation not stated
-- Session timeout duration: not specified
++-----------------------------------------------------------------------------------------------------+
+| 📈 StockAnalyzer    [ NSE TERMINAL ]                       [BU] Busettypavanan   [🚪 Sign Out]     |
++-----------------------------------------------------------------------------------------------------+
+| Investing.com Technical Charts                                       | NSE Watchlist  + Add         |
+|                                                                      |----------------------------  |
+|  NIFTY500   [5]  [30] 1h  4h  1D  1W  1M  30                         | RELIANCE       ₹2,945.50     |
+|  +---------------------------------------------------------------+   | Reliance Ind.   ↗ +2.45%     |
+|  | Nifty 500, India, 30, NSE    22400.00                         |   |----------------------------  |
+|  | O:21342.25 H:21422.50 L:21327.35 C:21427.60                   |   | TCS            ₹4,120.00     |
+|  |       /\                                                      |   | Tata Cons.      ↗ +1.15%     |
+|  |      /  \    /\        /\                                     |   |----------------------------  |
+|  |     /    \  /  \  /\  /  \     21427.60                       |   | INFY           ₹1,680.25     |
+|  |    /      \/    \/  \/    \_______                            |   | Infosys Ltd.    ↘ -0.75%     |
+|  +---------------------------------------------------------------+   +------------------------------+
+|  | Vol (20): 339.249M 209.889M                                   |
+|  +---------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+| 💲 NSE Portfolio Holdings ^                                              [+ Add Asset]  [4 ASSETS]  |
++-----------------------------------------------------------------------------------------------------+
+| ASSET / TICKER            BUY PRICE        CURRENT PRICE        PROFIT / LOSS                       |
+|---------------------------------------------------------------------------------------------------  |
+| TATAMOTORS                ₹850.00          ₹980.50              ↗ +₹130.50 (+15.35%)                |
+| Tata Motors Ltd.                                                                                    |
+|---------------------------------------------------------------------------------------------------  |
+| ICICIBANK                 ₹1,050.25        ₹1,140.10            ↗ +₹89.85 (+8.56%)                  |
+| ICICI Bank Ltd.                                                                                     |
+|---------------------------------------------------------------------------------------------------  |
+| SBIN                      ₹810.00          ₹795.30              ↘ -₹14.70 (-1.81%)                  |
+| State Bank of India                                                                                 |
++-----------------------------------------------------------------------------------------------------+
