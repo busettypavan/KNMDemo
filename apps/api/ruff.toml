@@ -10,5 +10,6 @@ select = ["E", "F", "I", "B", "UP"]
 extend-immutable-calls = ["fastapi.Depends", "fastapi.Query", "fastapi.Path", "fastapi.Body", "fastapi.Header", "fastapi.Cookie", "fastapi.Form", "fastapi.File", "fastapi.Security"]
 
 [lint.per-file-ignores]
-# the glue files are scaffold-owned: modules add their imports in the order they are applied
-"app/glue/*.py" = ["I001"]
+# the glue files are scaffold-owned: modules add their imports in the order they are applied, and each entry is one
+# tool-written line (config values and the knm:module tag included)
+"app/glue/*.py" = ["I001", "E501"]

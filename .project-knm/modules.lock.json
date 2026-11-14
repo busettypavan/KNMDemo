@@ -315,7 +315,7 @@
         {
           "path": "apps/api/ruff.toml",
           "templateHash": "2ee54bac9de2435fc9a0768d6de6d84a45d938ae87973224404802ad50047845",
-          "adaptedHash": "2ee54bac9de2435fc9a0768d6de6d84a45d938ae87973224404802ad50047845"
+          "adaptedHash": "6a851c6f2f440d06263eff77154b94ecf64968c1e3812938507399626bc5d674"
         },
         {
           "path": "apps/api/mypy.ini",
