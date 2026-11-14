@@ -1,119 +1,33 @@
-Login screen : Create User Tab
-------------------------------------------------
+# REQ-339: User Registration & Sign In
 
-+------------------------------------------+
-|                                          |
-|     [ ↗ ]  ● Stock ANALYTICS   	   |
-|                                          |
-|             StockAnalyzer                |
-|  Create your institutional-grade         |
-|          investor account                |
-|                                          |
-|  +------------------------------------+  |
-|  |   Sign In  | [ Create Account ]    |  |
-|  +------------------------------------+  |
-|                                          |
-|  Full Name *                             |
-|  +------------------------------------+  |
-|  | ♙  e.g. John Doe                   | |
-|  +------------------------------------+  |
-|                                          |
-|  Work Email Address *                    |
-|  +------------------------------------+  |
-|  | ✉  john.doe@company.com            | |
-|  +------------------------------------+  |
-|                                          |
-|  Password *                              |
-|  +------------------------------------+  |
-|  | 🔒 Create a strong password     ◉  | |
-|  +------------------------------------+  |
-|                                          |
-|  Confirm Password *                      |
-|  +------------------------------------+  |
-|  | 🔒 Re-enter password to confirm ◉  | |
-|  +------------------------------------+  |
-|                                          |
-|  [✓] I agree to the Terms of Service     |
-|      and Privacy Policy                  |
-|                                          |
-|  +------------------------------------+  |
-|  |       ♙ Create Free Account        | |
-|  +------------------------------------+  |
-|                                          |
-+------------------------------------------+
+- Feature: FEAT-1120 (User Registration & Sign In)
+- Decision: DEC-374 (Basic Auth for MVP)
+- Status: finalized
 
-Login screen : User signin Tab
----------------------------------------------
+## Purpose
 
-+------------------------------------------+
-|                                          |
-|      [ ↗ ]  ● Stock ANALYTICS|	   |
-|                                          |
-|             StockAnalyzer                |
-|   Sign in to access your quantitative    |
-|             trading terminal             |
-|                                          |
-|  +------------------------------------+  |
-|  |   [ Sign In ]  |  Create Account   |  |
-|  +------------------------------------+  |
-|                                          |
-|  +------------------------------------+  |
-|  | ✧ QUICK DEMO ACCESS                |  |
-|  |                                    |  |
-|  | [👤 Alex Morgan ] [👤 Sarah Chen] |  |
-|  | [   PRO TRADER  ] [  ENTERPRISE   ]|  |
-|  +------------------------------------+  |
-|                                          |
-|  Email Address *                         |
-|  +------------------------------------+  |
-|  | ✉  name@company.com               |  |
-|  +------------------------------------+  |
-|                                          |
-|  Password *                              |
-|  +------------------------------------+  |
-|  | 🔒 Enter your secret password   ◉  |  |
-|  +------------------------------------+  |
-|                                          |
-|  [✓] Remember me for 30 days             |
-|                       Forgot password?   |
-|                                          |
-|  +------------------------------------+  |
-|  |       → Sign In to Terminal        |  |
-|  +------------------------------------+  |
-|                                          |
-+------------------------------------------+
+Investors need an account so that their positions and preferences persist across visits. Basic authentication is required for the MVP (DEC-374).
 
+## Behaviour
 
-Terminal Page:
-----------------------------------------------
+1. **Create account.** A new investor can create an account by providing an email address and a password.
+2. **Sign in.** A registered investor can sign in with the same email address and password.
+3. **Persistence.** Once signed in, the investor's positions and preferences are associated with their account and are available again on later visits.
 
-+-----------------------------------------------------------------------------------------------------+
-| 📈 StockAnalyzer    [ NSE TERMINAL ]                       [BU] Busettypavanan   [🚪 Sign Out]     |
-+-----------------------------------------------------------------------------------------------------+
-| Investing.com Technical Charts                                       | NSE Watchlist  + Add         |
-|                                                                      |----------------------------  |
-|  NIFTY500   [5]  [30] 1h  4h  1D  1W  1M  30                         | RELIANCE       ₹2,945.50     |
-|  +---------------------------------------------------------------+   | Reliance Ind.   ↗ +2.45%     |
-|  | Nifty 500, India, 30, NSE    22400.00                         |   |----------------------------  |
-|  | O:21342.25 H:21422.50 L:21327.35 C:21427.60                   |   | TCS            ₹4,120.00     |
-|  |       /\                                                      |   | Tata Cons.      ↗ +1.15%     |
-|  |      /  \    /\        /\                                     |   |----------------------------  |
-|  |     /    \  /  \  /\  /  \     21427.60                       |   | INFY           ₹1,680.25     |
-|  |    /      \/    \/  \/    \_______                            |   | Infosys Ltd.    ↘ -0.75%     |
-|  +---------------------------------------------------------------+   +------------------------------+
-|  | Vol (20): 339.249M 209.889M                                   |
-|  +---------------------------------------------------------------+
-+-----------------------------------------------------------------------------------------------------+
-| 💲 NSE Portfolio Holdings ^                                              [+ Add Asset]  [4 ASSETS]  |
-+-----------------------------------------------------------------------------------------------------+
-| ASSET / TICKER            BUY PRICE        CURRENT PRICE        PROFIT / LOSS                       |
-|---------------------------------------------------------------------------------------------------  |
-| TATAMOTORS                ₹850.00          ₹980.50              ↗ +₹130.50 (+15.35%)                |
-| Tata Motors Ltd.                                                                                    |
-|---------------------------------------------------------------------------------------------------  |
-| ICICIBANK                 ₹1,050.25        ₹1,140.10            ↗ +₹89.85 (+8.56%)                  |
-| ICICI Bank Ltd.                                                                                     |
-|---------------------------------------------------------------------------------------------------  |
-| SBIN                      ₹810.00          ₹795.30              ↘ -₹14.70 (-1.81%)                  |
-| State Bank of India                                                                                 |
-+-----------------------------------------------------------------------------------------------------+
+## Acceptance criteria
+
+- [ ] A new investor can create an account with an email address and a password.
+- [ ] A registered investor can sign in with that email address and password.
+- [ ] Positions saved by a signed-in investor are still present after the investor signs out and signs in again.
+- [ ] Preferences saved by a signed-in investor are still present after the investor signs out and signs in again.
+- [ ] Positions and preferences are available on a later visit, after sign-in.
+
+## Questions and answers
+
+None. No questions were raised for this requirement.
+
+## Scope
+
+In scope: account creation, sign-in, and persistence of positions and preferences per account.
+
+Out of scope for this requirement: anything not named in REQ-339 or DEC-374.
