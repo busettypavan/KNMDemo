@@ -1,0 +1,36 @@
+{
+  "entity_type": "workItem",
+  "entity_id": "WI-030",
+  "assigned_to": "BVGcM2Z84GZ7d01RfF33rR8Lleu2",
+  "status": "pending",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "text": "Where should the JWT be issued? REQ-339 says the server signs and issues the token, but apps/api/app/auth/jwt.py says tokens are issued elsewhere by a Node API that is not in this repository.",
+      "options": [
+        "Issue tokens in the Python API (apps/api), in this work item",
+        "Tokens come from the existing external Node API; this work item only verifies them and the Python API does not issue them"
+      ],
+      "reason": "Decides whether sign-up and sign-in endpoints, password hashing and token signing are built in apps/api or only consumed from elsewhere.",
+      "required": true,
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "text": "Are password reset flows part of this work item, or a follow-up requirement?",
+      "options": [
+        "Part of WI-030",
+        "Follow-up requirement, not in WI-030"
+      ],
+      "reason": "REQ-339 names password reset under Security Baselines, but the mock and acceptance criteria do not show it, so the scope of this work item is unclear.",
+      "required": true,
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    }
+  ]
+}
