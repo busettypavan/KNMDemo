@@ -2,7 +2,7 @@
   "entity_type": "workItem",
   "entity_id": "WI-030",
   "assigned_to": "BVGcM2Z84GZ7d01RfF33rR8Lleu2",
-  "status": "pending",
+  "status": "completed",
   "questions": [
     {
       "id": "q1",
@@ -14,9 +14,10 @@
       ],
       "reason": "Decides whether sign-up and sign-in endpoints, password hashing and token signing are built in apps/api or only consumed from elsewhere.",
       "required": true,
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "answer": "Issue tokens in the Python API (apps/api), in this work item",
+      "answered_by": "BVGcM2Z84GZ7d01RfF33rR8Lleu2",
+      "answered_at": "2026-11-15T01:30:23.000Z",
+      "other": null
     },
     {
       "id": "q2",
@@ -28,9 +29,10 @@
       ],
       "reason": "REQ-339 names password reset under Security Baselines, but the mock and acceptance criteria do not show it, so the scope of this work item is unclear.",
       "required": true,
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "answer": "Part of WI-030",
+      "answered_by": "BVGcM2Z84GZ7d01RfF33rR8Lleu2",
+      "answered_at": "2026-11-15T01:30:23.000Z",
+      "other": null
     }
   ]
 }
