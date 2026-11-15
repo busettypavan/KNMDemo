@@ -1,0 +1,48 @@
+{
+  "entity_type": "testCase",
+  "entity_id": "TC-015",
+  "assigned_to": "BVGcM2Z84GZ7d01RfF33rR8Lleu2",
+  "status": "pending",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "text": "Acceptance criteria 3, 4 and 5 of REQ-339 require positions and preferences to persist across sign-out, sign-in and later visits. WI-030 explicitly leaves out positions and preferences storage (no such tables exist in the repo). Should TC-015 (a) leave these criteria out and have a follow-up test case cover them once storage exists, or (b) verify them now against a stand-in resource? If (b), which resource should be used?",
+      "reason": "No storage exists for positions or preferences, so the expected outcomes for those criteria cannot be written without guessing.",
+      "required": true,
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "text": "REQ-339 says the client stores the JWT and sends it in the Authorization header. WI-030 uses an HttpOnly, Secure, SameSite=Strict cookie instead. Should the test cases verify the cookie transport (the WI-030 plan), or the Authorization header (the requirement wording)?",
+      "reason": "The two transports produce different expected outcomes for sign-in, session persistence and sign-out. The WI-030 risks say the product owner should confirm this change.",
+      "required": true,
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "text": "What counts as a strong password for sign-up? Please give the minimum length and any required character classes, and say whether a breached-password check applies.",
+      "reason": "REQ-339 and WI-030 say strong password without defining it, so the weak-password and boundary scenarios cannot be written.",
+      "required": true,
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "text": "Ownership scenarios need a resource that belongs to a user. WI-030 says the Note table has no owner column and may get a user_id in the migration, or be flagged as not user-scoped. Which applies, and which resource should the cross-user access test use?",
+      "reason": "The ownership test (a user cannot read another user's resource) needs a concrete resource and its owner field.",
+      "required": true,
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    }
+  ]
+}
