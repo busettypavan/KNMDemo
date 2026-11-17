@@ -2,7 +2,7 @@
   "entity_type": "requirement",
   "entity_id": "REQ-340",
   "assigned_to": "BVGcM2Z84GZ7d01RfF33rR8Lleu2",
-  "status": "pending",
+  "status": "completed",
   "questions": [
     {
       "id": "q1",
@@ -14,9 +14,10 @@
       ],
       "reason": "The list page, sidebar and stock links are web work, but the Nifty 100 reference list, the daily yfinance fetch and the price data are server-side work (api). Both are needed; the primary one is where most of the work lives, and the other is listed as an additional application.",
       "required": true,
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "answer": "web",
+      "answered_by": "BVGcM2Z84GZ7d01RfF33rR8Lleu2",
+      "answered_at": "2026-11-17T10:47:18.000Z",
+      "other": null
     },
     {
       "id": "q2",
@@ -29,9 +30,10 @@
       ],
       "reason": "Approved requirement lists sort order as an open question; market cap needs a data field the functional requirements do not define for the Stock table (only symbol, name, sector).",
       "required": true,
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "answer": "Symbol (alphabetical)",
+      "answered_by": "BVGcM2Z84GZ7d01RfF33rR8Lleu2",
+      "answered_at": "2026-11-17T10:47:18.000Z",
+      "other": null
     },
     {
       "id": "q3",
@@ -44,9 +46,10 @@
       ],
       "reason": "Approved requirement lists pagination as not specified. A single page of 100 rows is the simplest fit for the 2-second page-load criterion.",
       "required": true,
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "answer": "Infinite scroll",
+      "answered_by": "BVGcM2Z84GZ7d01RfF33rR8Lleu2",
+      "answered_at": "2026-11-17T10:47:18.000Z",
+      "other": null
     }
   ]
 }
