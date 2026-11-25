@@ -27,7 +27,7 @@ describe('app shell contract', () => {
   });
 
   it('works with the scaffold glue as it is (no modules registered yet: the not-found page)', () => {
-    render(<App Router={at('/')} />);
+    render(<App Router={at('/nope')} />);
     expect(screen.getByText('Page not found')).toBeTruthy();
   });
 

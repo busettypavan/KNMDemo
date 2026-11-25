@@ -1,23 +1,23 @@
-// Typed API client over the generated schema (openapi-fetch). The bearer token is kept in memory only.
+// Typed API client over the generated schema (openapi-fetch). Sign-in is an httpOnly cookie that the browser keeps and
+// sends by itself (credentials: 'include'), so no script can read the session. Every request carries X-Requested-With,
+// which the API requires before it acts on a cookie-authenticated change (CSRF protection).
 import createClient, { type Middleware } from 'openapi-fetch';
 import type { paths } from './schema';
 
-let token: string | null = null;
-/** Sets (or, with null, clears) the bearer token sent with every request. In memory only: a reload signs the user out. */
-export const setAuthToken = (value: string | null): void => { token = value; };
-export const getAuthToken = (): string | null => token;
+export const CSRF_HEADER = 'X-Requested-With';
+export const CSRF_VALUE = 'knm';
 
-const auth: Middleware = {
+const csrf: Middleware = {
   onRequest({ request }) {
-    if (token) request.headers.set('Authorization', `Bearer ${token}`);
+    request.headers.set(CSRF_HEADER, CSRF_VALUE);
     return request;
   }
 };
 
 /** In development `/api` is proxied to the API (see API_PROXY_TARGET); in production serve the API under /api or pass its URL. */
 export function createApiClient(baseUrl = '/api', fetchImpl?: typeof fetch) {
-  const client = createClient<paths>({ baseUrl, ...(fetchImpl ? { fetch: fetchImpl } : {}) });
-  client.use(auth);
+  const client = createClient<paths>({ baseUrl, credentials: 'include', ...(fetchImpl ? { fetch: fetchImpl } : {}) });
+  client.use(csrf);
   return client;
 }
 

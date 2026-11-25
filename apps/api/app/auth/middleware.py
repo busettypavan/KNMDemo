@@ -2,6 +2,10 @@
 
 No Authorization header = anonymous (request.state.auth is None). A token that is present but not valid, or a malformed
 Bearer header, is 401 with one answer for every kind of bad token. A valid token sets request.state.auth.
+
+The session cookie ("session", httpOnly) is read when no Authorization header is sent. A stale or invalid cookie means
+signed out (anonymous), so sign-in still works after the token has expired. A cookie-authenticated request that
+changes data (POST, PUT, PATCH, DELETE) must carry X-Requested-With, which a cross-site form cannot send.
 """
 
 import re
@@ -15,6 +19,9 @@ from app.auth.jwt import AuthClaims, AuthConfigError, verify_token
 
 _BEARER_PREFIX = re.compile(r"^bearer\b", re.IGNORECASE)
 _BEARER = re.compile(r"^Bearer\s+(\S+)$", re.IGNORECASE)
+SESSION_COOKIE = "session"
+CSRF_HEADER = "x-requested-with"
+_SAFE_METHODS = frozenset({"GET", "HEAD", "OPTIONS"})
 
 
 def _bearer(header: str | None) -> str | None:
@@ -37,6 +44,22 @@ async def _authenticate(request: Request, call_next: Callable[[Request], Awaitab
             return JSONResponse({"error": "auth-misconfigured"}, status_code=500)
         except jwt.PyJWTError:
             return JSONResponse({"error": "unauthorized"}, status_code=401)
+        return await call_next(request)
+
+    cookie = request.cookies.get(SESSION_COOKIE)
+    if cookie:
+        try:
+            request.state.auth = verify_token(cookie)
+        except AuthConfigError:
+            return JSONResponse({"error": "auth-misconfigured"}, status_code=500)
+        except jwt.PyJWTError:
+            request.state.auth = None  # expired or stale cookie: signed out, not an error
+        if (
+            request.state.auth is not None
+            and request.method not in _SAFE_METHODS
+            and CSRF_HEADER not in request.headers
+        ):
+            return JSONResponse({"error": "csrf-check-failed"}, status_code=403)
     return await call_next(request)
 
 

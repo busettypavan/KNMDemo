@@ -1,4 +1,5 @@
-"""Verification of signed access tokens (HS256) with PyJWT. Tokens are issued elsewhere (same claims as the Node API).
+"""Verification of signed access tokens (HS256) with PyJWT.
+Sessions are issued by app/auth/routes.py; verification here accepts only session tokens (no purpose claim).
 
 The secret comes from JWT_SECRET (at least 32 characters) and nowhere else.
 """
@@ -47,6 +48,8 @@ def verify_token(token: str, settings: AuthSettings | None = None) -> AuthClaims
     subject = payload.get("sub")
     if not isinstance(subject, str) or not subject:
         raise jwt.InvalidTokenError("token has no subject")
+    if "purpose" in payload:  # single-purpose tokens (password reset) are never accepted as a session
+        raise jwt.InvalidTokenError("not a session token")
     tenant = payload.get("tenantId")
     roles = payload.get("roles")
     return AuthClaims(

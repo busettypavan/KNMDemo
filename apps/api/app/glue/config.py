@@ -7,5 +7,10 @@ config: list[dict[str, object]] = [
     {"key": "DATABASE_URL", "default": "libsql://tursodemo-busettypavan.aws-ap-south-1.turso.io"},  # knm:module sqlalchemy-db
     {"key": "JWT_SECRET", "default": ""},  # knm:module jwt-auth
     {"key": "CACHE_TTL_SECONDS", "default": "30"},  # knm:module memory-cache
+    {"key": "COOKIE_SECURE", "default": "true"},  # knm:module accounts
+    {"key": "TOKEN_TTL_SECONDS", "default": "3600"},  # knm:module accounts
+    {"key": "LOGIN_MAX_FAILURES", "default": "5"},  # knm:module accounts
+    {"key": "LOGIN_LOCK_SECONDS", "default": "900"},  # knm:module accounts
+    {"key": "RESET_TTL_SECONDS", "default": "900"},  # knm:module accounts
     # knm:entries-end
 ]

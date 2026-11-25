@@ -7,6 +7,8 @@ module.exports = {
   transform: { '^.+\\.tsx?$': 'ts-jest' },
   // tests import the untyped scripts/*.cjs helpers (TS7016)
   globals: { 'ts-jest': { diagnostics: { ignoreCodes: [7016] } } },
+  // react-financial-charts is ESM and draws on a canvas: tests get a stub (tests that check its props mock it themselves)
+  moduleNameMapper: { '^react-financial-charts$': '<rootDir>/tests/support/react-financial-charts.stub.ts' },
   // first import of the app shell compiles Chakra and the router through ts-jest: slow when suites run in parallel
   testTimeout: 30000,
   setupFilesAfterEnv: ['<rootDir>/src/testing/setup.ts'],
