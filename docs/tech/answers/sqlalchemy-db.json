@@ -1,0 +1,15 @@
+{
+  "title": "Module configuration",
+  "description": "Answers are used to configure the modules you are adding.",
+  "status": "completed",
+  "questions": [
+    {
+      "id": "sqlalchemy-db.DATABASE_URL",
+      "type": "text",
+      "text": "SQLAlchemy database (async, SQLite): Database URL (file:./data/app.db for a local SQLite file)?",
+      "help": "Config key: DATABASE_URL. Leave empty to use the default: file:./data/app.db",
+      "required": false,
+      "answer": "libsql://tursodemo-busettypavan.aws-ap-south-1.turso.io"
+    }
+  ]
+}

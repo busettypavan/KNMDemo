@@ -1,0 +1,15 @@
+{
+  "title": "Module configuration",
+  "description": "Answers are used to configure the modules you are adding.",
+  "status": "completed",
+  "questions": [
+    {
+      "id": "fastapi.PORT",
+      "type": "text",
+      "text": "FastAPI (Python API framework): Port the API listens on?",
+      "help": "Config key: PORT. Leave empty to use the default: 8000",
+      "required": false,
+      "answer": null
+    }
+  ]
+}

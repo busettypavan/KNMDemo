@@ -16,6 +16,11 @@ Investors need an account so that their positions and preferences persist across
 
 ## Acceptance criteria
 
+- [X] A new investor can create an account with an email address and a password.
+- [X] A registered investor can sign in with that email address and password.
+- [X] Positions saved by a signed-in investor are still present after the investor signs out and signs in again.
+- [X] Preferences saved by a signed-in investor are still present after the investor signs out and signs in again.
+- [X] Positions and preferences are available on a later visit, after sign-in.
 - [ ] A new investor can create an account with an email address and a password.
 - [ ] A registered investor can sign in with that email address and password.
 - [ ] Positions saved by a signed-in investor are still present after the investor signs out and signs in again.
